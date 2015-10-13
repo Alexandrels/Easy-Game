@@ -1,0 +1,21 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pos.com.br.easy_game.ui.TelaInicialActivity">
+    <item android:id="@+id/menu_tela_inicial_cad_usuario"
+        android:title="Usuário"
+        android:icon="@drawable/ic_cad_user_32"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_tela_inicial_cad_jogador"
+        android:title="Cad Jogador"
+        android:icon="@drawable/ic_cad_jogador_32"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_tela_inicial_mapa"
+        android:title="Mapa"
+        android:icon="@drawable/ic_map_32"
+        app:showAsAction="always"/>
+    <item android:id="@+id/menu_tela_inicial_list_jogador"
+        android:title="Jogadores Cadastrados"
+        android:icon="@drawable/ic_list_jogadores_32"
+        app:showAsAction="always"/>
+</menu>
