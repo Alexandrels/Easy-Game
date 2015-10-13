@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pos.com.br.easy_game" >
+
+    <permission
+        android:name="com.pos.com.br.easy_game.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Internet permission -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="pos.com.br.easy_game.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".ui.TelaInicialActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.RowJogador"
+            android:label="@string/title_activity_row_jogador" />
+        <activity
+            android:name=".ui.ListViewJogador"
+            android:label="@string/title_activity_list_jogadores" />
+        <activity
+            android:name=".ui.CadJogadorActivity"
+            android:label="@string/title_activity_cad_jogador" />
+        <activity
+            android:name=".ui.CadUsuarioActivity"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAiNZmPNyhKwbVKT7RgCN0tOXSEd91brdQ" />
+
+        <activity
+            android:name=".ui.MapsTeamActivity"
+            android:label="@string/title_activity_tela_inicial" >
+        </activity>
+    </application>
+
+</manifest>
