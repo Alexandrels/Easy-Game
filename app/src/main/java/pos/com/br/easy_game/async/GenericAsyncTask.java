@@ -98,9 +98,13 @@ public class GenericAsyncTask extends AsyncTask<String, ProgressDialog, JSONObje
     @Override
     protected void onPostExecute(JSONObject jsonObject) {
         super.onPostExecute(jsonObject);
-        atualizavel.atualizar(jsonObject);
-        if (progressDialog.isShowing()) {
-            progressDialog.dismiss();
+        try {
+            atualizavel.atualizar(jsonObject);
+            if (progressDialog.isShowing()) {
+                progressDialog.dismiss();
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 }

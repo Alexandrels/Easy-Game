@@ -59,6 +59,18 @@
             android:name=".ui.MapsTeamActivity"
             android:label="@string/title_activity_tela_inicial" >
         </activity>
+        <activity
+            android:name=".ui.LoginActivity"
+            android:label="@string/title_activity_login" >
+        </activity>
+        <activity
+            android:name=".ui.CadEquipeActivity"
+            android:label="@string/title_activity_cad_equipe" >
+        </activity>
+        <activity
+            android:name=".ui.RowCheckboxJogador"
+            android:label="@string/title_activity_row_checkbox_jogador" >
+        </activity>
     </application>
 
 </manifest>

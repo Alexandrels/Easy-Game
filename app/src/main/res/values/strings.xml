@@ -25,4 +25,8 @@
     <string name="title_activity_tela_inicial">TelaInicial</string>
     <string name="menu_done">Done</string>
     <string name="menu_cancel">Cancel</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_cad_equipe">Criar Equipe</string>
+    <string name="title_activity_row_checkbox_jogador">RowCheckboxJogador</string>
+    <string name="nome_equipe">Nome</string>
 </resources>

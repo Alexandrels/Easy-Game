@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import pos.com.br.easy_game.classes.CoordenadasService;
@@ -36,6 +37,10 @@ public class CoordenadaAsyncTask extends AsyncTask<Void, Void, JSONObject> {
     @Override
     protected void onPostExecute(JSONObject jsonObject) {
         super.onPostExecute(jsonObject);
-        atualizavel.atualizar(jsonObject);
+        try {
+            atualizavel.atualizar(jsonObject);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 }

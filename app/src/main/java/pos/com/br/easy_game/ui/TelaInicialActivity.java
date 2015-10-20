@@ -43,6 +43,10 @@ public class TelaInicialActivity extends AppCompatActivity {
                 Intent listJogador = new Intent(this, ListViewJogador.class);
                 startActivity(listJogador);
                 break;
+            case R.id.menu_tela_inicial_cad_equipe:
+                Intent cadEquipe = new Intent(this, CadEquipeActivity.class);
+                startActivity(cadEquipe);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

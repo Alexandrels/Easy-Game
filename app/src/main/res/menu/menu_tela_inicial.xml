@@ -2,20 +2,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="pos.com.br.easy_game.ui.TelaInicialActivity">
-    <item android:id="@+id/menu_tela_inicial_cad_usuario"
-        android:title="Usuário"
+    <item
+        android:id="@+id/menu_tela_inicial_cad_usuario"
         android:icon="@drawable/ic_cad_user_32"
-        app:showAsAction="always"/>
-    <item android:id="@+id/menu_tela_inicial_cad_jogador"
-        android:title="Cad Jogador"
+        android:title="Usuário"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_tela_inicial_cad_jogador"
         android:icon="@drawable/ic_cad_jogador_32"
-        app:showAsAction="always"/>
-    <item android:id="@+id/menu_tela_inicial_mapa"
-        android:title="Mapa"
+        android:title="Cad Jogador"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_tela_inicial_mapa"
         android:icon="@drawable/ic_map_32"
-        app:showAsAction="always"/>
-    <item android:id="@+id/menu_tela_inicial_list_jogador"
-        android:title="Jogadores Cadastrados"
+        android:title="Mapa"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_tela_inicial_list_jogador"
         android:icon="@drawable/ic_list_jogadores_32"
-        app:showAsAction="always"/>
+        android:title="Jogadores Cadastrados"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_tela_inicial_cad_equipe"
+        android:icon="@drawable/ic_cad_user_32"
+        android:title="Criar Equipe"
+        app:showAsAction="always" />
 </menu>

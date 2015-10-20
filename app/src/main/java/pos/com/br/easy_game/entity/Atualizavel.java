@@ -1,5 +1,6 @@
 package pos.com.br.easy_game.entity;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
@@ -7,5 +8,5 @@ import org.json.JSONObject;
  */
 public interface Atualizavel {
 
-    void atualizar(JSONObject jsonObject);
+    void atualizar(JSONObject jsonObject) throws JSONException;
 }
