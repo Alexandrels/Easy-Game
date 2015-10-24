@@ -5,7 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_row_jogador" />
     <string name="title_activity_cad_usuario" />
-    <string name="title_activity_list_jogadores">Jogadores</string>
+    <string name="title_activity_list_jogadores">Jogadores Diponíveis</string>
     <string name="title_activity_cad_jogador">Cadastro Jogador</string>
     <string name="nome_jogador">nome</string>
     <string name="posicao_jg">Posição</string>
@@ -21,8 +21,8 @@
     <string name="title_leitor_coordenadas">Leitor Coordenadas</string>
     <string name="title_activity_my_location_listener">MyLocationListener</string>
     <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_activity_maps_team">Map</string>
-    <string name="title_activity_tela_inicial">TelaInicial</string>
+    <string name="title_activity_maps_team">Times da Região</string>
+    <string name="title_activity_tela_inicial">Gerenciador</string>
     <string name="menu_done">Done</string>
     <string name="menu_cancel">Cancel</string>
     <string name="title_activity_login">LoginActivity</string>

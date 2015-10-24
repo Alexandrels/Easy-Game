@@ -1,15 +1,10 @@
 package pos.com.br.easy_game.ui;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.ListAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,11 +23,11 @@ import pos.com.br.easy_game.entity.Atualizavel;
 import pos.com.br.easy_game.entity.Jogador;
 import pos.com.br.easy_game.enuns.Method;
 import pos.com.br.easy_game.listUtil.ListAdapterCheckboxJogador;
-import pos.com.br.easy_game.listUtil.ListAdapterJogador;
 
 public class CadEquipeActivity extends Activity implements Atualizavel {
     private ListView listaJogadores;
-    private String servico = "jogador";
+    private String servicoJogador = "jogador";
+    private String servicoEquipe = "equipe";
     private List<Jogador> jogadores;
     private ListAdapterCheckboxJogador adapter;
 
@@ -43,7 +38,7 @@ public class CadEquipeActivity extends Activity implements Atualizavel {
 
         listaJogadores = (ListView) findViewById(R.id.listaJogadores);
 
-        new GenericAsyncTask(this, this, Method.GET, servico).execute();
+        new GenericAsyncTask(this, this, Method.GET, servicoJogador).execute();
 
         Button novoJogador = (Button) findViewById(R.id.btn_add_equipe);
         novoJogador.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +46,25 @@ public class CadEquipeActivity extends Activity implements Atualizavel {
             public void onClick(View v) {
                 if (!adapter.getSelecionados().isEmpty()) {
                     Toast.makeText(v.getContext(), "Não esta vazia tem :" + adapter.getSelecionados().size(), Toast.LENGTH_SHORT).show();
+                    EditText ttNome = (EditText) findViewById(R.id.nomeJogador);
+                    try {
+                        JSONObject equipe = new JSONObject();
+                        JSONArray jogadores = new JSONArray();
+                        if (ttNome != null) {
+                            String nome = ttNome.getText().toString();
+                            equipe.put("nome", nome);
+                        }
+                        for (Jogador jogador : adapter.getSelecionados()) {
+                            JSONObject jogadorJson = new JSONObject();
+                            jogadorJson.put("id", jogador.getId().toString());
+                            jogadores.put(jogadorJson);
+                        }
+                        equipe.put("jogadores",jogadores);
+                        new GenericAsyncTask(CadEquipeActivity.this, CadEquipeActivity.this, Method.POST, String.format("%s", servicoEquipe), equipe.toString()).execute();
+
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 } else {
                     Toast.makeText(v.getContext(), "esta vazia tem :", Toast.LENGTH_SHORT).show();
                 }
@@ -65,7 +79,10 @@ public class CadEquipeActivity extends Activity implements Atualizavel {
     public void atualizar(JSONObject jsonObject) {
         Gson gson = new Gson();
         jogadores = new ArrayList<>();
-        if (jsonObject.has("array")) {
+        if (jsonObject.has("equipe")) {
+            Toast.makeText(this, "Equipe cadastrada", Toast.LENGTH_SHORT).show();
+
+        } else if (jsonObject.has("array")) {
             try {
                 JSONArray array = jsonObject.getJSONArray("array");
                 for (int i = 0; i < array.length(); i++) {
