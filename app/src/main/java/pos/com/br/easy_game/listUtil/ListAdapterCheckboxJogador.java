@@ -68,11 +68,11 @@ public class ListAdapterCheckboxJogador extends ArrayAdapter<Jogador> {
                 CheckBox chk = (CheckBox) v;
                 Jogador jogador = (Jogador) chk.getTag();
                 if(chk.isChecked()) {
-                    Toast.makeText(getContext(), "Checbox de " + jogador.getId() + " marcado!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getContext(), "Checbox de " + jogador.getId() + " marcado!", Toast.LENGTH_SHORT).show();
                     if(!selecionados.contains(jogador))
                         selecionados.add(jogador);
                 } else {
-                    Toast.makeText(getContext(), "Checbox de " + jogador.getId() + " desmarcado!", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getContext(), "Checbox de " + jogador.getId() + " desmarcado!", Toast.LENGTH_SHORT).show();
                     if(selecionados.contains(jogador))
                         selecionados.remove(jogador);
                 }
