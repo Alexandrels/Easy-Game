@@ -21,9 +21,9 @@ import pos.com.br.easy_game.enuns.Method;
 public class GenericAsyncTask extends AsyncTask<String, ProgressDialog, JSONObject> {
 
     private static final String DESENVOLVIMENTO = "http://192.168.25.2";
-    private static final String ONDELINE = "http://52.88.211.135";
+    private static final String ONDELINE = "http://52.88.65.93";
 
-    private static final String URL_WS = String.format("%s:8080/easy-game/servicos",DESENVOLVIMENTO);
+    private static final String URL_WS = String.format("%s:8080/easy-game/servicos",ONDELINE);
     private Atualizavel atualizavel;
     private Context context;
     private String servico;

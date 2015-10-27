@@ -7,6 +7,6 @@
 
     style="@android:style/ButtonBar"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@drawable/tela_inicial">
+    android:background="@drawable/fundo_tela_gerenciador">
 
 </LinearLayout>
